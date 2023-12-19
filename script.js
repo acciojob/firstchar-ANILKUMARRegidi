@@ -1,20 +1,12 @@
  function firstChar(text) {
-    let ans = '';
-    let res = false;
-
     for (let char of text) {
-        ans = char;
-        res = true;
-        break;
+        if (char !== ' ') {
+            return char; // Return the first non-space character immediately
+        }
     }
-
-    if (res) {
-        return ans;
-    }
-
-    return '';
+    return ''; // Return an empty string if the text is empty or only contains spaces
 }
 
-// Do not change the code below.
+// Example usage:
 const text = prompt("Enter text:");
 alert(firstChar(text));
